@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ActivateByFlag : MonoBehaviour
 {
-    public GlobalVariable.ITEM_TYPE itemType;
+    public GlobalVariable.FLAG_TYPE flagType;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (!GlobalVariable.items[(int)itemType]){
+        if (!GlobalVariable.flags[(int)flagType]){
             gameObject.SetActive(false);
         }
     }
