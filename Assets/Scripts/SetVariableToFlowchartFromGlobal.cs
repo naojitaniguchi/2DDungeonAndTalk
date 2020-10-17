@@ -21,4 +21,9 @@ public class SetVariableToFlowchartFromGlobal : MonoBehaviour
     {
         gameObject.GetComponent<Fungus.Flowchart>().SetIntegerVariable("CoinCount", GlobalVariable.itemCounts[(int)GlobalVariable.ITEM_TYPE.ITEM_00]);
     }
+
+    public void setDrinkCount()
+    {
+        gameObject.GetComponent<Fungus.Flowchart>().SetIntegerVariable("DrinkCount", GlobalVariable.itemCounts[(int)GlobalVariable.ITEM_TYPE.ITEM_01]);
+    }
 }

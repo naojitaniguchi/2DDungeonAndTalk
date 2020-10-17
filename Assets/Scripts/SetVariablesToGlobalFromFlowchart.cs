@@ -25,4 +25,14 @@ public class SetVariablesToGlobalFromFlowchart : MonoBehaviour
     {
         GlobalVariable.flags[0] = false;
     }
+
+    public void GunOn()
+    {
+        GlobalVariable.flags[1] = true;
+    }
+
+    public void GunOff()
+    {
+        GlobalVariable.flags[1] = false;
+    }
 }
