@@ -12,6 +12,8 @@ public class AnimationChange : MonoBehaviour
 
     Rigidbody2D rb2d = null;
 
+    bool talking = false;
+
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
@@ -20,6 +22,11 @@ public class AnimationChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (talking)
+        {
+            return;
+        }
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
             gameObject.GetComponent<Animator>().SetBool("Walk", true);
@@ -100,5 +107,15 @@ public class AnimationChange : MonoBehaviour
     public void Cast()
     {
         gameObject.GetComponent<Animator>().SetTrigger("Cast");
+    }
+
+    public void talkStart()
+    {
+        talking = true;
+    }
+
+    public void talkStop()
+    {
+        talking = false;
     }
 }
